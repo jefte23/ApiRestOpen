@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar .navbar-static-top{
+    background-color:#0072bf !important;
+}
+.skin-blue .main-header .logo {
+    background-color: #0072bf !important;
+}
+
+.skin-blue .main-header .navbar {
+    background-color: #0072bf !important;
+}
+
+div.container4 {
+    height: 10em;
+    position: relative }
+div.container4 p {
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.ui-growl {
+    top: 54px !important;
+    right: 28px !important;
+}
+
+.debug{
+    border-color: brown !important;
+    background: crimson;
+}
+.nao-exibir{
+    display:none !important;
+}
+
+.no-border-direita{
+   border:none !important;
+}
+
+.text-align-right {
+    text-align: right !important;
+    margin: 5px !important;
+}
+
+.text-align-left {
+    text-align: left !important;
+}
+
+
+
+/* remover elementos */
+@media print {
+    .no-print { 
+        display:none !important; 
+    }
+
+    .no-border{
+        border: none;
+        background-color: #3c8dbc !important;
+    }
+
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        border: 1px solid #333 !important;
+    }
+
+}
+
+.space{
+    margin:15px !important;
+}
+
+/*loadin bar*/
+
+
+
+  
+
+    
+ 

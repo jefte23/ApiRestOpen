@@ -1,0 +1,25 @@
+.row{
+    margin-right: 70px !important;
+    margin-left: -30px !important;
+    margin:13px !important;
+}
+
+.box {
+    border-top: 3px solid #00a65a !important;
+}
+
+
+.btn {
+    font-size: 17px;
+}
+
+.label-default {
+    background-color: #949aa7 !important;
+}
+.label-primary{
+    font-size: 14px !important;
+}
+tabele{
+    font-size: 14px !important;
+
+} 

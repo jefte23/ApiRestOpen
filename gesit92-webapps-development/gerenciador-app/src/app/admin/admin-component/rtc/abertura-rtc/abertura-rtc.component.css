@@ -1,0 +1,25 @@
+.debug {
+    border: solid 1px red;
+}
+
+.AreaTexto {
+    width: 100%;
+    height: 100%;
+    border: solid 1px #d6d6d6;
+}
+
+.AreaTexto:active {
+    border: solid 1px #4587dd;
+}
+
+.AreaTexto:after {
+    border: solid 1px #4587dd;
+}
+
+.botoes {
+    text-align: left;
+}
+
+.form-control {
+    width: 100% !important;
+}

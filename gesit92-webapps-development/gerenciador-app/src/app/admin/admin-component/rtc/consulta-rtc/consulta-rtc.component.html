@@ -1,0 +1,75 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">Consulta - RTC</div>
+    <div class="panel-body">
+
+        <div class="ui-g ui-fluid">
+            <div class="ui-g-2 ui-md-10">
+                <div class="ui-inputgroup">
+                    <input type="text" pInputText placeholder="{{placeholder}}" size="100">
+                    <p-splitButton [model]="items" label="{{label == null ? 'Pesquisar':label}}" size="30" icon="pi pi-check"></p-splitButton>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">Consulta - RTC</div>
+    <div class="panel-body">
+
+        <div class="row passos">
+            <p-steps [model]="stepItems" styleClass="steps-custom"></p-steps>
+        </div>
+
+
+        <h3 class="first">RTC encontradas</h3>
+
+        <p-table [value]="recomendacoesTecnicas" [(selection)]="selectedRecomendacaoTecnica" selectionMode="single" dataKey="recomendacaoTecnica">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>destinatario</th>
+                    <th>responsavel</th>
+                    <th>gerencia</th>
+                    <th>nivelCriticidade</th>
+                    <th>descricao</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rTecnica>
+                <tr>
+                    <td>{{rTecnica.destinatario}}</td>
+                    <td>{{rTecnica.responsavel}}</td>
+                    <td>{{rTecnica.gerencia}}</td>
+                    <td>{{rTecnica.nivelCriticidade}}</td>
+                    <td>{{rTecnica.descricao}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+
+        <p-table [columns]="cols" [value]="cars" selectionMode="single" [(selection)]="selectedRecomendacaoTecnica" dataKey="vin">
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns">
+                        {{col.header}}
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr [pSelectableRow]="rowData">
+                    <td *ngFor="let col of columns">
+                        {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="summary">
+                <div style="text-align: left">
+                    Selected Car: {{selectedRecomendacaoTecnica ? selectedRecomendacaoTecnica.destinatario + ' - ' + selectedRecomendacaoTecnica.responsavel + ' - ' + selectedRecomendacaoTecnica.gerencia + ' - ' + selectedRecomendacaoTecnica.nivelCriticidade: 'none'}}
+                </div>
+            </ng-template>
+        </p-table>
+
+
+    </div>
+</div>

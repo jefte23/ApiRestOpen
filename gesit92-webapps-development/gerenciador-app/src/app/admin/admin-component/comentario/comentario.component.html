@@ -1,0 +1,94 @@
+<div class="row">
+    <div class="container">
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-6">
+            <div class="box box-primary col-md-12">
+                <div class="box-header with-border col-md-12 debud">
+                    <h2>Cadastro de comentários<small><i><br>consumo mainframe</i></small></h2>
+                </div>
+                <div>
+                    <form role="form" #myForm="ngForm">
+                        <!-- 
+                          {{comentarioConsumoMF | json}}
+                          <pre>{{myForm.capacidade | json}}</pre>
+                        -->
+
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <br>
+                                    <div [class.has-error]="!data.valid && data.touched" [class.has-feedback]="!data.valid && data.touched">
+                                        <input type="date" class="entrada tipdate" name="data" id="data" [(ngModel)]="comentarioConsumoMF.data"
+                                            required #data="ngModel">
+                                        <label for="data">Data</label><br>
+                                    </div>
+
+                                    <div [class.has-error]="!capacidade.valid && capacidade.touched"
+                                        [class.has-feedback]="!capacidade.valid && capacidade.touched">
+                                        <input type="number" class="entrada" id="capacidade" name="capacidade"
+                                            [(ngModel)]="comentarioConsumoMF.capacidade" required size="30" pInputText>
+                                        <label for="cadacidade">Capacidade</label>
+                                    </div>
+                                    <div class="form-group" [class.has-error]="!capacidade.valid && capacidade.touched"
+                                        [class.has-feedback]="!capacidade.valid && capacidade.touched">
+
+                                        <input class="entrada" id="consumo" name="consumo" [(ngModel)]="comentarioConsumoMF.consumo"
+                                            type="number" size="30">
+                                        <label for="consumo">Consumo médio</label>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <br>
+                                    <div>
+                                        <select>
+                                            <option></option>
+                                            <option>1</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        <label>Tipo</label>
+                                    </div>
+
+                                    <div>
+                                        <select>
+                                            <option></option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                        </select>
+                                        <label>Produto</label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-12"><br>
+                                    <textarea pInputTextarea class="form-control" id="description" name="description"
+                                        [(ngModel)]="comentarioConsumoMF.comentario" autoResize="autoResize"></textarea>
+                                    <label>Comentário</label>
+                                </div>
+                            </div>
+
+
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-9"></div>
+                                    <div class="col-md-3"><br>
+                                        <button type="submit" class="btn btn-custom btn-blue btn-md"><span class="fa fa-save"></span>
+                                            Salvar
+                                        </button><br>
+                                    </div>
+                                    <br>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,130 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc        
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+*.editorconfig
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+*.editorconfig
+
+
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+
+### STS 
+###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+/gerenciador-de-massagem-api/.mvn/wrapper/maven-wrapper.jar
+/gerenciador-de-massagem-api/.mvn/wrapper
+/capacidade-api/.mvn/wrapper/*.jar
+/capacidade-api/.mvn/wrapper/maven-wrapper.jar
+/capacidade-api/.mvn/wrapper/maven-wrapper.jar
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/catalina.policy
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/catalina.properties
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/context.xml
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/jmxremote.access
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/jmxremote.password
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/server.xml
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/tomcat-users.xml
+/capacidade-api/Servers/Pivotal tc Server Developer Edition v3.2-config/web.xml
+/package-lock.json

@@ -1,0 +1,251 @@
+
+
+
+  <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+
+<form-wizard>
+  
+  <wizard-step [title]="'Identeificação'" [isValid]="emailForm.form.valid"   (onNext)="onStep1Next($event)">
+    {{emailForm.form.valid}}
+    <div class="col-md-2 "></div>
+
+    <div class="col-md-8 space  ">
+      
+      <div class=" box box-primary ">
+          <div class="box-header with-border">
+            <h2 class="box-title"> Identificação  </h2>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start --> 
+          <form class="form-horizontal" #emailForm="ngForm">
+            <div class="box-body">
+              
+              <div class="form-group">
+                <label for="tipoAcionamento" class="col-sm-3 control-label">Tipo de Acionamento</label>
+                  <div class="col-sm-9">
+                      <select class="form-control" id="tipoAcionamento">
+                          <option disabled=true >Selecione</option>
+                          <option *ngFor="let c of tipoAcionamento" [ngValue]="c.id">{{c.name}}</option>
+                      </select>
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-3 control-label">Ferramenta de Monitoração</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="ferramentaMonitoração" placeholder="Ferramenta de Monitoração">
+                </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-3 control-label">Impacto</label>
+                  <div class="col-sm-9">
+                    <input required type="password" class="form-control" id="impacto" placeholder="Impacto">
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-3 control-label">Urgência</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="urgencia" placeholder="Urgência">
+                    </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label">Àrea</label>
+                    <div class="col-sm-9">
+                        <select class="form-control">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                          </select>
+                    </div>
+              </div>
+  
+              <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">Subárea</label>
+                      <div class="col-sm-9">
+                          <select class="form-control">
+                              <option>option 1</option>
+                              <option>option 2</option>
+                            </select>
+                      </div>
+              </div>
+  
+              <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-3 control-label">Serviço Afetado</label>
+                      <div class="col-sm-9">
+                        <select class="form-control">
+                            <option>option 1</option>
+                            <option>option 2</option>
+                        </select>
+                    </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label">Interface de Aplicativo</label>
+                    <div class="col-sm-9">
+                      <select class="form-control">
+                          <option>option 1</option>
+                          <option>option 2</option>
+                      </select>
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-3 control-label">IC Afetado</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="icAfetado" placeholder="IC Afetado">
+                  </div>
+                </div>
+  
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-3 control-label">Equipe Solucionadora</label>
+                    <div class="col-sm-9">
+                      <input type="password" class="form-control" id="equipeSolucionadora" placeholder="Equipe Solucionadora">
+                    </div>
+                  </div>
+  
+  
+              <div class="form-group">
+                  <label for="inputPassword" class="col-sm-3 control-label">Analista</label>
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" id="analista" placeholder="Analista">
+                  </div>
+              </div>
+  
+              <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label">Abiente</label>
+                    <div class="col-sm-9">
+                      <select class="form-control">
+                          <option>option 1</option>
+                          <option>option 2</option>
+                      </select>
+                  </div>
+            </div>
+  
+            </div>
+          </form>
+    </div>
+  </div>
+  
+  </wizard-step>
+  
+  <wizard-step [showNext]="step2.showNext" [showPrev]="step2.showPrev" [title]="'Dados do Criador'" (onNext)="onStep2Next($event)">        
+  <div class="col-md-3 "></div>
+
+  <div class="col-md-6  space">
+  
+  <div class="box box-primary ">
+      <div class="box-header with-border">
+        <h3 class="box-title">Dados do Criador</h3>
+      </div>
+      
+      <!-- /.box-header -->
+      <!-- form start -->
+      <form class="form-horizontal" name="formulario1">
+        <div class="box-body">
+      
+          <div class="form-group">
+            <label for="criadorRegsitro" class="col-sm-3 control-label">Criador do registro : </label>
+            <div class="col-sm-9">
+              {{funcionario.matricula}} - {{funcionario.nome}}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nome" class="col-sm-3 control-label">Nome</label>
+            <div class="col-sm-9">
+              {{funcionario.nome}}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="telefone" class="col-sm-3 control-label">Telefone</label>
+            <div class="col-sm-9">
+             {{funcionario.telefone}}
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label for="equipeCriadorRegistro" class="col-sm-3 control-label">Email</label>
+            <div class="col-sm-9">
+              {{funcionario.email}}
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="equipeCriadorRegistro" class="col-sm-3 control-label">Função</label>
+            <div class="col-sm-9">
+              {{funcionario.funcao}}
+            </div>
+          </div>
+          
+        </div>
+      </form>
+    </div> 
+  </div>
+
+  </wizard-step> 
+  
+  <wizard-step [title]="'Comentário'" (onNext)="onStep3Next($event)">
+     <div class="col-md-3 "></div>
+
+    <div class="col-md-6 space ">
+      <div class="box box-primary ">
+          <div class="box-header with-border">
+            <h3 class="box-title"><strong>comentário</strong></h3>
+          </div>
+          <!-- /.box-header -->
+          <!-- form start -->
+          <form class="form-horizontal">
+            <div class="box-body">
+                   
+            <div class="form-group col-md-12">
+                <label for="comentario" class=" control-label">Titulo</label>
+                  <input  class="form-control" id="comentario" placeholder="Titulo">
+            </div>                   
+
+            <div class="form-group col-md-12 ">
+                <label>Texto</label>
+                <textarea class="form-control" rows="8" placeholder="Comentário ..."></textarea>
+            </div>
+  
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+             
+            </div>
+            <!-- /.box-footer -->
+          </form>
+        </div>
+    </div>
+
+  </wizard-step>
+  
+  <wizard-step [title]="'Step4'" (onComplete)="onComplete($event)">
+    <div class="col-md-2 "></div>
+    
+    <div [ngSwitch]="isCompleted">
+      <div *ngSwitchDefault>
+        <h1>Step4</h1>
+      </div>
+      <div *ngSwitchCase="true">
+        <h4>Thank you! You have completed all the steps.</h4>
+      </div>
+    </div>
+
+  </wizard-step>
+
+</form-wizard>
+
+
+
+
+
+
+
+
+
+
+
+     

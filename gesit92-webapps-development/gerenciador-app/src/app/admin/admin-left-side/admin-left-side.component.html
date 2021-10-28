@@ -1,0 +1,136 @@
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Pesquisar...">
+                <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu">
+            <li class="header">MENU</li>
+
+            <!-- nunu incidente -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa   fa fa-envelope-o"></i>
+                    <span>Ger. de Incidentes</span>
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li><a [routerLink]="['incidente']"><i class="fa fa-file-text-o"></i>Abrir Novo Incidentes</a></li>
+                    <li><a [routerLink]="['buscar-incidente']"><i class="fa fa-search"></i>Buscar Incidentes</a></li>
+                </ul>
+            </li>
+
+            <!-- nunu comentario -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-commenting-o"></i>
+                    <span>Comentário</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li><a [routerLink]="['comentario']"><i class="fa fa-file-text-o"></i>Novo Comentário</a></li>
+                    <li><a><i class="fa fa-search"></i>Buscar Comentário</a></li>
+                </ul>
+            </li>
+
+
+            <!-- nunu outros -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-th-large"></i>
+                    <span title="Comentários Acompnhamento Capacidade">Geral</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                </a>
+
+                <!-- nunu outros-->
+                <ul class="treeview-menu">
+                    <li><a [routerLink]="['grupos-threshold']"><i class="fa   fa-area-chart"></i>Consumo</a></li>
+
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>Painel</span>
+                            <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                        </a>
+                        <ul class="treeview-menu" style="display: none;">
+                            <li><a [routerLink]="['sportfire']"><i class="fa fa-mail-forward"></i> Spotfire</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>API</span>
+                            <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                        </a>
+                        <ul class="treeview-menu" style="display: none;">
+                            <li><a [routerLink]="['documentacao']"><i class="fa fa-circle-o"></i> Documentação</a></li>
+                            <li><a href="../charts/chartjs.html"><i class="fa fa-circle-o"></i> URLs</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <!-- menu RTC-->
+            <li class="treeview">
+                <a href="#">
+                    <i class="glyphicon glyphicon-signal"></i>
+                    <span>Recomendações técnicas</span>
+                    <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+                </a>
+                <ul class="treeview-menu" style="display: none;">
+                    <li><a [routerLink]="['abertura-rtc']"><i class="fa fa-file-text-o"></i>Novo RTC</a></li>
+                    <li><a [routerLink]="['consulta-rtc']"><i class="fa fa-search"></i>Buscar RTC</a></li>
+                </ul>
+            </li>
+
+
+            <!-- Link caderno plataforma -->
+            <li class="treeview active">
+                <a [routerLink]="['caderno-plataforma']">
+                    <i class="fa  fa-book"></i>
+                    <span>Caderno Plataforma</span>
+                </a>
+            </li>
+
+            <!-- Link Gestão de capacidade -->
+            <li class="treeview active">
+                <a [routerLink]="['wiki']">
+                    <i class="fa fa-fw fa-list"></i>
+                    <span>Gestão de Capacidade</span>
+                </a>
+            </li>
+
+            <!-- Link Ajuda -->
+            <li class="treeview active">
+                <a [routerLink]="['documentacao']">
+                    <i class="fa  fa-envelope"></i>
+                    <span>Ajuda</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

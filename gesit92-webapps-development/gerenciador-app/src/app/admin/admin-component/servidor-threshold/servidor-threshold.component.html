@@ -1,0 +1,51 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+  
+<br>
+{{fileSystemSelecionado | json}}
+<div class="row "> 
+
+    <p-dataTable  [value]="servidores" (onRowSelect)="onRowSelect($event)" sortMode="multiple" selectionMode="single" [(selection)]="fileSystemSelecionado"
+        [contextMenu]="contex" >
+    
+        <p-header>LISTA DE GRUPOS COM CONSUMO ACIMA DO THRESHOLD</p-header>
+
+        <p-column field="listaThresholdId.servico" header="Serviço"></p-column>
+        <p-column header="Grupo" field="listaThresholdId.grupo"> </p-column>
+        <p-column header="Servidor" field="listaThresholdId.servidor"></p-column>
+        <p-column header="Dt. Consumo" field="ultimoCosumo"></p-column>
+        <p-column header="RDI" field="rdi"></p-column>
+        <p-column header="Dt. RDI" field="resolucaoRdi" [sortable]="true"></p-column>
+        <p-column header="Comentário" field="valor"></p-column>
+        <p-column header="Dt. Comentário" field="ultimaAcao" [sortable]="true"></p-column>
+        <p-column header="Recurso" field="listaThresholdId.recurso"></p-column>
+
+        <ng-template pTemplate="paginatorLeft">
+            <button type="button" pButton icon="fa-refresh"></button>
+        </ng-template>
+
+    </p-dataTable> 
+    
+    <p-contextMenu #contex [model]="items"></p-contextMenu>
+
+</div>
+
+
+<div *ngIf="heDisco" class="row" >
+    <p-dataTable [value]="fileSystens" (onRowSelect)="onRowSelectDisco($event)"
+     selectionMode="single" [(selection)]="selectedThreshold"  >
+
+        <p-header>FILE SYSTEM ACIMA DO THRESHOLD </p-header>
+        <p-column header="File System" field="fileSystem"> </p-column>
+        <p-column header="Dispositivo" field="dispositivo"></p-column>
+        <p-column header="Àrea Total(GB)" field="areaTotal"></p-column>
+        <p-column header="Àrea Utilizada(GB)" field="areaUtilizada"></p-column>
+        <p-column header="Threshold(%)" field="threshold"></p-column>
+        <p-column header="Percentual Utilizado" field="pcUtilizada"></p-column>
+        <p-column header="Data" field="dataColeta"></p-column>
+    </p-dataTable>
+</div>
+
+<div class="row">
+    <div [chart]="chart"></div>
+</div>
+

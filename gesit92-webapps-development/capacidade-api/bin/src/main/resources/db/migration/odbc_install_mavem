@@ -1,0 +1,7 @@
+mvn install:install-file -Dfile=C:\driver\ojdbc7.jar  -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0 -Dpackaging=jar
+------- add pom.xml
+	<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc7</artifactId>
+			<version>12.2.0.1</version>
+	</dependency>

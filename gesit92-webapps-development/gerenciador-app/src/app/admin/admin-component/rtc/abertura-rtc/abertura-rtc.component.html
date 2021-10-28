@@ -1,0 +1,53 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">RTC - Recomendações técnicas de capacidade</h3>
+    </div>
+    <div class="panel-body">
+        <form>
+            <div class="row">
+                <div class="col-md-8">
+                    <label for="destinatario">Destinatário</label>
+                    <div class="input-group">
+                        <input id="destinatario" type="text" class="form-control" placeholder="Informe gerência">
+                        <span class="input-group-btn">
+                          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Responsavel">Responsavel:</label>
+                        <input type="text" class="form-control" id="Responsavel">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="gerencia">Gerência:</label>
+                        <input type="text" class="form-control" id="gerencia">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="sel1">Nivel de Criticidade</label>
+                        <select class="form-control" id="sel1">
+                          <option>Baixo</option>
+                          <option>Médio</option>
+                          <option>Alto</option>
+                        </select>
+                    </div>
+                    <br>
+                    <label for="descricao">Descrição</label>
+                    <div class="input-group" style="width: 100%">
+                        <textarea pInputTextarea class="form-control" id="description" name="description" style="height: 94px;"></textarea>
+                    </div>
+                </div>
+
+            </div><br><br>
+
+            <div class="rown">
+                <div class="botoes">
+                    <button type="file" class="btn btn-default btn-md">Selecionar recomendação técnica  <span class="glyphicon glyphicon-cloud-upload"></span></button>
+                    <button type="button" class="btn btn-primary btn-blue btn-md">Recomendação <span class="glyphicon glyphicon-ok"></span></button>
+                    <button type="button" class="btn btn-danger btn-md">Cancelar <span class="glyphicon glyphicon-remove"></span></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

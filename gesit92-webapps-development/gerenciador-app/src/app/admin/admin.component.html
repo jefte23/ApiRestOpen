@@ -1,0 +1,142 @@
+<div class="wrapper" *ngIf="redirecionarHome ; else template" >
+
+  <app-admin-header></app-admin-header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <app-admin-left-side ></app-admin-left-side>
+
+  <!-- Content Wrapper. Contains page content -->
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+ <!--
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i>Ínicio</a></li>
+      <li class="active"> Agendamento </li> 
+    </ol>
+-->
+
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+      
+    <div style="margin-left: none!">       
+        <router-outlet></router-outlet>
+    </div>
+
+  </section>
+  <!-- /.content -->
+</div>
+  
+  <!-- /.content-wrapper -->
+  <app-admin-footer></app-admin-footer>
+
+</div>
+<ng-template #template>
+  <body hold-transition>
+  <style>
+      .sk-cube-grid {
+      width: 80px;
+      height:80px;
+      margin: 80px auto;
+    }
+    .sk-cube-grid .sk-cube { 
+      width: 33.33%;
+      height: 33.33%;
+      background-color:#f9e609;
+      float: left;
+      -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+              animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; } 
+    .sk-cube-grid .sk-cube1 {
+      -webkit-animation-delay: 0.2s; 
+              animation-delay: 0.2s; }
+    .sk-cube-grid .sk-cube2 {
+      -webkit-animation-delay: 0.3s;
+              animation-delay: 0.3s; }  
+    .sk-cube-grid .sk-cube3 { 
+      -webkit-animation-delay: 0.4s;
+              animation-delay: 0.4s; }
+    .sk-cube-grid .sk-cube4 {
+      -webkit-animation-delay: 0.1s;
+              animation-delay: 0.1s; }
+    .sk-cube-grid .sk-cube5 {
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s; }
+    .sk-cube-grid .sk-cube6 {
+      -webkit-animation-delay: 0.3s;
+              animation-delay: 0.3s; }
+    .sk-cube-grid .sk-cube7 {
+      -webkit-animation-delay: 0.0s;
+              animation-delay: 0.0s; }
+    .sk-cube-grid .sk-cube8 { 
+      -webkit-animation-delay: 0.1s;
+              animation-delay: 0.1s; }
+    .sk-cube-grid .sk-cube9 {
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s; }
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1); }
+    35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); } }
+  @keyframes sk-cubeGridScaleDelay {
+    0%, 70%, 100% {
+      -webkit-transform: scale3D(1, 1, 1);
+              transform: scale3D(1, 1, 1); }
+    35% {
+      -webkit-transform: scale3D(0, 0, 1);
+              transform: scale3D(0, 0, 1); } }
+    
+    .val{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #0072bf;
+        margin: 0;
+      padding: 0;
+    }
+/** loader page new */  
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+  
+/* Safari */ 
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+  </style> 
+  
+    <div class="val">
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div> 
+                <div class="sk-cube sk-cube8"></div> 
+                <div class="sk-cube sk-cube9"></div>
+            </div> 
+      </div>
+
+     <!-- <div class="loader"></div> -->
+  </body>
+  </ng-template>

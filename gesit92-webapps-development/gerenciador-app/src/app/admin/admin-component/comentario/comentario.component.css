@@ -1,0 +1,69 @@
+/* .bt {
+  border: 0;
+  padding: 10px;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+} */
+
+input[type=date]:required:invalid::-webkit-datetime-edit {
+  color: transparent;
+}
+input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+.caixaDialogo {
+  width: 418px;
+}
+
+.label .h4, .h5, .h6, label, h4, h5, h6 {
+  color: rgb(127, 129, 131);
+  font-style: italic;
+  ruby-align: left;
+}
+
+.entrada {
+  padding:8px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #ccc;
+  width:100%
+}
+
+select {
+  background: none;
+  display:block;
+  border:none;
+  padding:8.5px;
+  border-bottom:1px solid #ccc;
+  width:100%
+}
+
+.tipdate {
+  -webkit-appearance: none;
+}
+
+
+.btn-custom {
+	color: #3c8dbc;
+  border: none;
+	text-transform: uppercase;
+  transition: background 0.6s, color 0.4s;
+}
+
+.btn-blue {
+  background-color: transparent;
+  color: 3c8dbc;
+  border:2px solid #3c8dbc;
+}
+
+.btn-blue:hover {
+	background-color: #3c8dbc;
+  color: white;
+  border:2px solid #3c8dbc;
+}
+
